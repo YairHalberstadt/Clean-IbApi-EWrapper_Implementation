@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96AE72A4-9CC3-48DB-8844-5AFB630B43F2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EWrapperImpl</RootNamespace>
+    <AssemblyName>EWrapperImpl</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSharpAPI">
+      <HintPath>..\..\..\..\..\..\..\TWS API\source\CSharpClient\client\obj\Debug\CSharpAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Inherited_From_EventArgs\AccountDownloadEndArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\AccountSummaryArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\AccountSummaryEndArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\AccountUpdateMultiArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\AccountUpdateMultiEndArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\BondContractDetailsArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\CommissionReportArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\ConnectAckArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\ConnectionClosedArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\ContractDetailsArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\ContractDetailsEndArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\DeltaNeutralValidationArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\DisplayGroupListArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\DisplayGroupUpdatedArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\ExecDetailsArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\ExecDetailsEndArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\FundamentalDataArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\HistoricalDataArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\HistoricalDataEndArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\ID_StringError.cs" />
+    <Compile Include="Inherited_From_EventArgs\ManagedAccountsArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\MarketDataTypeArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\NextValidIdArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\OpenOrderArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\OpenOrderEndArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\OrderStatusArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\PositionArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\PositionEndArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\PositionMultiArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\PositionMultiEndArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\RealtimeBarArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\ReceiveFAArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\ScannerDataArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\ScannerDataEndArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\ScannerParametersArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\SecurityDefinitionOptionParameterArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\SecurityDefinitionOptionParameterEndArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\SoftDollarTiersArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\TickArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\TickEfpArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\TickerIdArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\TickGenericArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\TickOptionComputationArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\TickPriceArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\TickSiseArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\TickSnapshotEndArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\TickStringArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\UpdateAccountTimeArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\UpdateAccountValueArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\UpdateMktDepthArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\UpdateMktDepthL2Args.cs" />
+    <Compile Include="Inherited_From_EventArgs\UpdateNewsBulletinArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\UpdatePortfolioArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\VerifyAndAuthCompletedArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\VerifyAndAuthMessageAPIArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\VerifyCompletedArgs.cs" />
+    <Compile Include="Inherited_From_EventArgs\VerifyMessageAPIArgs.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="EWrapperImpl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
