@@ -1,13 +1,9 @@
 ﻿using IBApi;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EWrapperImpl
 {
-    class Program
+    class SampleProgram
     {
         static void Main(string[] args)
         {
@@ -19,9 +15,9 @@ namespace EWrapperImpl
             Console.Read();
         }
 
-        static void OnOrder(object sender, OpenOrderArgs openOrderargs)
+        static void OnOrder(object sender, OpenOrderArgs openOrderArgs)
         {
-            Console.WriteLine(openOrderargs.Order.OrderType);
+            Console.WriteLine(openOrderArgs.Order.OrderType);
         }
     }
 }
