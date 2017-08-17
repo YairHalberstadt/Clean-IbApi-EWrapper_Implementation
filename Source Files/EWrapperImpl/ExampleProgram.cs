@@ -16,7 +16,7 @@ namespace EWrapperImpl
                 Symbol = "EUR",
                 Exchange = "IDEALPRO",
                 Currency = "USD",
-                SecType="Cash"
+                SecType="CASH"
             };
             MktDataToken token = wrapper.Requester.ReqMarketData(contract, "", false, null, WriteTickPrice);
 
