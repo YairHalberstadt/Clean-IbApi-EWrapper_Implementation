@@ -1,0 +1,7 @@
+C:\Users\yairh\Documents\Visual Studio 2017\Projects\EWrapperImpl\EWrapperImpl\bin\Debug\EWrapperImpl.exe
+C:\Users\yairh\Documents\Visual Studio 2017\Projects\EWrapperImpl\EWrapperImpl\bin\Debug\EWrapperImpl.pdb
+C:\Users\yairh\Documents\Visual Studio 2017\Projects\EWrapperImpl\EWrapperImpl\bin\Debug\CSharpAPI.dll
+C:\Users\yairh\Documents\Visual Studio 2017\Projects\EWrapperImpl\EWrapperImpl\bin\Debug\CSharpAPI.pdb
+C:\Users\yairh\Documents\Visual Studio 2017\Projects\EWrapperImpl\EWrapperImpl\obj\Debug\EWrapperImpl.exe
+C:\Users\yairh\Documents\Visual Studio 2017\Projects\EWrapperImpl\EWrapperImpl\obj\Debug\EWrapperImpl.pdb
+C:\Users\yairh\Documents\Visual Studio 2017\Projects\EWrapperImpl\EWrapperImpl\obj\Debug\EWrapperImpl.csprojResolveAssemblyReference.cache
