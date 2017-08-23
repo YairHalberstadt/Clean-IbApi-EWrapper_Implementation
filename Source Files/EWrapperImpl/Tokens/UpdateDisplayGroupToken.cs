@@ -1,19 +1,19 @@
 using System;
+using System.Threading;
 
 namespace EWrapperImpl
 {
     public class UpdateDisplayGroupToken : Token
     {
         public int ID { get; }
-        private static int NextID=1;
+        private static int NextID=0;
 
-        public UpdateDisplayGroupToken()
+        internal UpdateDisplayGroupToken()
         {
-            ID = NextID++;
+            ID = Interlocked.Increment(ref NextID);
         }
 
-        internal UpdateDisplayGroupToken(int id) //don't request data with a token created with this constructor. 
-                                        //It should only be used for searching for a specific token in a dictionary.
+        internal UpdateDisplayGroupToken(int id)
         {
             ID = id;
         }

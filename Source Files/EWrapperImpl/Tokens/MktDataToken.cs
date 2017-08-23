@@ -10,12 +10,10 @@ namespace EWrapperImpl
     public class MktDataToken : TickOptionComputationToken
     {
 
-        public MktDataToken():base()
-        {
-        }
+        internal MktDataToken():base()
+        {}
 
-        internal MktDataToken(int id):base(id)//don't request data with a token created with this constructor. 
-                                        //It should only be used for searching for a specific token in a dictionary.
+        internal MktDataToken(int id):base(id)
         { }
             
 

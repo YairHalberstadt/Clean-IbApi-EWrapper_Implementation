@@ -24,45 +24,53 @@ namespace EWrapperImpl
         internal void ConnectToIB(int port, int clientId, string host="")
 
         {
-            ClientSocket.eConnect(host, port, clientId);
-
-            var reader = new EReader(ClientSocket, Signal);
-            reader.Start();
-            new Thread(() =>
+            if (!IsConnected())
             {
-                while (ClientSocket.IsConnected())
-                {
-                    Signal.waitForSignal();
-                    reader.processMsgs();
-                }
-            })
-            { IsBackground = true }.Start();
+                ClientSocket.eConnect(host, port, clientId);
 
-            // Pause here until the connection is complete 
-            while (NextOrderId <= 0) { }
+                var reader = new EReader(ClientSocket, Signal);
+                reader.Start();
+                new Thread(() =>
+                {
+                    while (ClientSocket.IsConnected())
+                    {
+                        Signal.waitForSignal();
+                        reader.processMsgs();
+                    }
+                })
+                { IsBackground = true }.Start();
+
+                // Pause here until the connection is complete 
+                while (NextOrderId <= 0) { }
+            }
         }
 
         internal void ConnectToIB(int port, int clientId, bool extraAuth, string host="")
         {
-            ClientSocket.eConnect(host, port, clientId, extraAuth);
-
-            var reader = new EReader(ClientSocket, Signal);
-            reader.Start();
-            new Thread(() =>
+            if (!IsConnected())
             {
-                while (ClientSocket.IsConnected())
-                {
-                    Signal.waitForSignal();
-                    reader.processMsgs();
-                }
-            })
-            { IsBackground = true }.Start();
+                ClientSocket.eConnect(host, port, clientId, extraAuth);
 
-            // Pause here until the connection is complete 
-            while (NextOrderId <= 0) { }
+                var reader = new EReader(ClientSocket, Signal);
+                reader.Start();
+                new Thread(() =>
+                {
+                    while (ClientSocket.IsConnected())
+                    {
+                        Signal.waitForSignal();
+                        reader.processMsgs();
+                    }
+                })
+                { IsBackground = true }.Start();
+
+                // Pause here until the connection is complete 
+                while (NextOrderId <= 0) { }
+            }
         }
 
-        public int NextOrderId { get { return _NextOrderId++; } internal set { _NextOrderId = value; } }
+        object NextOrderIDLock = new object();
+        
+        public int NextOrderId { get { lock (NextOrderIDLock) { return _NextOrderId++; } } internal set { lock (NextOrderIDLock) { _NextOrderId = value; } } }
         private int _NextOrderId = 0;
 
 

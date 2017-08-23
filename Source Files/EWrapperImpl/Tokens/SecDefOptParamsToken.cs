@@ -1,19 +1,19 @@
 using System;
+using System.Threading;
 
 namespace EWrapperImpl
 {
     public class SecDefOptParamsToken : Token
     {
         public int ID { get; }
-        private static int NextID=1;
+        private static int NextID=0;
 
-        public SecDefOptParamsToken()
+        internal SecDefOptParamsToken()
         {
-            ID = NextID++;
+            ID = Interlocked.Increment(ref NextID);
         }
 
-        internal SecDefOptParamsToken(int id) //don't request data with a token created with this constructor. 
-                                        //It should only be used for searching for a specific token in a dictionary.
+        internal SecDefOptParamsToken(int id)
         {
             ID = id;
         }

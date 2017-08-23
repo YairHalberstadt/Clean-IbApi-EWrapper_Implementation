@@ -1,19 +1,19 @@
 using System;
+using System.Threading;
 
 namespace EWrapperImpl
 {
     public class RealTimeBarsToken : Token
     {
         public int ID { get; }
-        private static int NextID=1;
+        private static int NextID=0;
 
-        public RealTimeBarsToken()
+        internal RealTimeBarsToken()
         {
-            ID = NextID++;
+            ID = Interlocked.Increment(ref NextID);
         }
 
-        internal RealTimeBarsToken(int id) //don't request data with a token created with this constructor. 
-                                        //It should only be used for searching for a specific token in a dictionary.
+        internal RealTimeBarsToken(int id)
         {
             ID = id;
         }

@@ -3,17 +3,17 @@ using System.Threading;
 
 namespace EWrapperImpl
 {
-    public class FundamentalDataToken : Token
+    public class CalculateImpliedVolatilityToken : Token
     {
         public int ID { get; }
         private static int NextID=0;
 
-        internal FundamentalDataToken()
+        internal CalculateImpliedVolatilityToken()
         {
             ID = Interlocked.Increment(ref NextID);
         }
 
-        internal FundamentalDataToken(int id)
+        internal CalculateImpliedVolatilityToken(int id)
         {
             ID = id;
         }
@@ -25,9 +25,9 @@ namespace EWrapperImpl
 
         public override bool Equals(object obj)
         {
-            if (obj is FundamentalDataToken)
+            if (obj is CalculateImpliedVolatilityToken)
             {
-                return ID.Equals(((FundamentalDataToken)obj).ID);
+                return ID.Equals(((CalculateImpliedVolatilityToken)obj).ID);
             }
             else
             {
@@ -35,12 +35,12 @@ namespace EWrapperImpl
             }
         }
 
-        public static bool operator ==(FundamentalDataToken a, FundamentalDataToken b)
+        public static bool operator ==(CalculateImpliedVolatilityToken a, CalculateImpliedVolatilityToken b)
         {
             return a.Equals(b);
         }
 
-        public static bool operator !=(FundamentalDataToken a, FundamentalDataToken b)
+        public static bool operator !=(CalculateImpliedVolatilityToken a, CalculateImpliedVolatilityToken b)
         {
             return !a.Equals(b);
         }

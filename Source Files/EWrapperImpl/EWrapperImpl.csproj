@@ -106,9 +106,6 @@
     <Compile Include="EventArgs Types\VerifyAndAuthMessageAPIArgs.cs" />
     <Compile Include="EventArgs Types\VerifyCompletedArgs.cs" />
     <Compile Include="EventArgs Types\VerifyMessageAPIArgs.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Other Classes\TokenActionPair.cs" />
     <Compile Include="IBReciever.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -136,22 +133,13 @@
     <Compile Include="Tokens\UpdateDisplayGroupToken.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="obj\Debug\CoreCompileInputs.cache" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\Debug\EWrapperImpl.csprojResolveAssemblyReference.cache" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="bin\Debug\CSharpAPI.dll" />
     <Content Include="bin\Debug\CSharpAPI.pdb" />
     <Content Include="bin\Debug\EWrapperImpl.exe" />
     <Content Include="bin\Debug\EWrapperImpl.pdb" />
-    <Content Include="obj\Debug\EWrapperImpl.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\EWrapperImpl.exe" />
-    <Content Include="obj\Debug\EWrapperImpl.pdb" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
-    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
