@@ -42,7 +42,6 @@ namespace StockCandlesCollector
                 else throw new ArgumentOutOfRangeException("A candle is already in this Collection with the same start time");
 
                 Candles.Insert(index, candle);
-                Console.WriteLine($"StartDate:  {candle.StartTime},  Open:  {candle.Open},  Close  {candle.Close}");
             }
         }
 

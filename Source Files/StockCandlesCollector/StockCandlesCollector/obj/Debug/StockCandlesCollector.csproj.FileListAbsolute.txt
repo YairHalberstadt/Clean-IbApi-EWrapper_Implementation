@@ -2,8 +2,8 @@ C:\Users\yairh\Documents\Visual Studio 2017\Projects\StockCandlesCollector\Stock
 C:\Users\yairh\Documents\Visual Studio 2017\Projects\StockCandlesCollector\StockCandlesCollector\bin\Debug\StockCandlesCollector.pdb
 C:\Users\yairh\Documents\Visual Studio 2017\Projects\StockCandlesCollector\StockCandlesCollector\bin\Debug\CSharpAPI.dll
 C:\Users\yairh\Documents\Visual Studio 2017\Projects\StockCandlesCollector\StockCandlesCollector\bin\Debug\EWrapperImpl.exe
-C:\Users\yairh\Documents\Visual Studio 2017\Projects\StockCandlesCollector\StockCandlesCollector\bin\Debug\CSharpAPI.pdb
 C:\Users\yairh\Documents\Visual Studio 2017\Projects\StockCandlesCollector\StockCandlesCollector\bin\Debug\EWrapperImpl.pdb
 C:\Users\yairh\Documents\Visual Studio 2017\Projects\StockCandlesCollector\StockCandlesCollector\obj\Debug\StockCandlesCollector.csprojResolveAssemblyReference.cache
 C:\Users\yairh\Documents\Visual Studio 2017\Projects\StockCandlesCollector\StockCandlesCollector\obj\Debug\StockCandlesCollector.dll
 C:\Users\yairh\Documents\Visual Studio 2017\Projects\StockCandlesCollector\StockCandlesCollector\obj\Debug\StockCandlesCollector.pdb
+C:\Users\yairh\Documents\Visual Studio 2017\Projects\StockCandlesCollector\StockCandlesCollector\obj\Debug\StockCandlesCollector.csproj.CoreCompileInputs.cache

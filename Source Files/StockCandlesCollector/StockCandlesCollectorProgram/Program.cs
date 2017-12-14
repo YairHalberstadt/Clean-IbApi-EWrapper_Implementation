@@ -25,11 +25,12 @@ namespace StockCandlesCollectorProgram
             {
                 using (IBWrapper ibWrapper = new IBWrapper())
                 {
-                    ibWrapper.ConnectToIB(7497, 2);
+                    ibWrapper.ConnectToIB(7496, 2);
 
                     CandlesCollector collector = new CandlesCollector(ibWrapper, CandleSize.FiveSeconds, contract,Duration.Null);
-                    Task.Delay(10000).Wait();
+                    Task.Delay(1000).Wait();
                     Console.WriteLine($"{ i}  FINISHED");
+                    Console.WriteLine(collector.LastPrice);
                 }
             }
         }

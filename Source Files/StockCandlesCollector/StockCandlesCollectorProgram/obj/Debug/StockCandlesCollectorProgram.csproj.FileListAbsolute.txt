@@ -4,9 +4,9 @@ C:\Users\yairh\documents\visual studio 2017\Projects\StockCandlesCollector\Stock
 C:\Users\yairh\documents\visual studio 2017\Projects\StockCandlesCollector\StockCandlesCollectorProgramme\bin\Debug\CSharpAPI.dll
 C:\Users\yairh\documents\visual studio 2017\Projects\StockCandlesCollector\StockCandlesCollectorProgramme\bin\Debug\EWrapperImpl.exe
 C:\Users\yairh\documents\visual studio 2017\Projects\StockCandlesCollector\StockCandlesCollectorProgramme\bin\Debug\StockCandlesCollector.dll
-C:\Users\yairh\documents\visual studio 2017\Projects\StockCandlesCollector\StockCandlesCollectorProgramme\bin\Debug\CSharpAPI.pdb
 C:\Users\yairh\documents\visual studio 2017\Projects\StockCandlesCollector\StockCandlesCollectorProgramme\bin\Debug\EWrapperImpl.pdb
 C:\Users\yairh\documents\visual studio 2017\Projects\StockCandlesCollector\StockCandlesCollectorProgramme\bin\Debug\StockCandlesCollector.pdb
 C:\Users\yairh\documents\visual studio 2017\Projects\StockCandlesCollector\StockCandlesCollectorProgramme\obj\Debug\StockCandlesCollectorProgram.csprojResolveAssemblyReference.cache
 C:\Users\yairh\documents\visual studio 2017\Projects\StockCandlesCollector\StockCandlesCollectorProgramme\obj\Debug\StockCandlesCollectorProgramme.exe
 C:\Users\yairh\documents\visual studio 2017\Projects\StockCandlesCollector\StockCandlesCollectorProgramme\obj\Debug\StockCandlesCollectorProgramme.pdb
+C:\Users\yairh\Documents\Visual Studio 2017\Projects\StockCandlesCollector\StockCandlesCollectorProgramme\obj\Debug\StockCandlesCollectorProgram.csproj.CoreCompileInputs.cache

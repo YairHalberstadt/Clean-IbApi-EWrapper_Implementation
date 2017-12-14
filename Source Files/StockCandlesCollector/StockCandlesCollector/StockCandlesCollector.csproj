@@ -30,8 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSharpAPI">
-      <HintPath>..\..\..\..\..\..\..\TWS API\source\CSharpClient\client\bin\Debug\CSharpAPI.dll</HintPath>
+    <Reference Include="CSharpAPI, Version=9.73.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\IB C# API\CSharpAPI.dll</HintPath>
     </Reference>
     <Reference Include="EWrapperImpl">
       <HintPath>..\..\EWrapperImpl\EWrapperImpl\bin\Debug\EWrapperImpl.exe</HintPath>
