@@ -66,6 +66,9 @@ namespace EWrapperImpl
         }
         public virtual void error(string str)
         {
+#if DEBUG
+            Console.WriteLine("error: "+ str);
+#endif
             Wrapper.ResetEvent.Set();
             lock (StringErrorLock)
             {
@@ -94,6 +97,9 @@ namespace EWrapperImpl
         }
         public virtual void error(int id, int errorCode, string errorMsg)
         {
+#if DEBUG
+            Console.WriteLine("error: " + id + " " + errorCode + " " + errorMsg);
+#endif
             Wrapper.ResetEvent.Set();
             lock (IdAndStringErrrorLock)
             {

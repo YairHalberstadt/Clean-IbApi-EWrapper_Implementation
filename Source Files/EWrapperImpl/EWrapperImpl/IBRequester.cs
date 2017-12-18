@@ -557,14 +557,19 @@ namespace EWrapperImpl
         ///// Available starting with API v973.03+ and TWS v965+. If true the endDateTime is irrelevant</param>
         /// <param name="chartOptions"></param>
         /// <param name="historicalDataSubscribers">A delegate containing all functions you want to subscribe to the HistoricalDataCallBack</param>
+        /// <param name="historicalDataEndSubscribers">A delegate containing all functions you want to subscribe to the HistoricalDataEndCallBack</param>
         /// <returns>Use this token to Subscribe a function to be called by HistoricalData</returns>
-        public HistoricalDataToken ReqHistoricalData(Contract contract, DateTime endDateTime, Duration duration, CandleSize candleSize, string whatToShow, bool useRegularTradingHours, bool keepUpToDate, List<TagValue> chartOptions = null, Action<object, HistoricalDataArgs> historicalDataSubscribers = null)
+        public HistoricalDataToken ReqHistoricalData(Contract contract, DateTime endDateTime, Duration duration, CandleSize candleSize, string whatToShow, bool useRegularTradingHours, bool keepUpToDate, List<TagValue> chartOptions = null, Action<object, HistoricalDataArgs> historicalDataSubscribers = null, Action<object, HistoricalDataEndArgs> historicalDataEndSubscribers = null)
         {
             HistoricalDataToken token = new HistoricalDataToken();
             Receiver.TokenCandleSizeDicionaryAdd(token, candleSize);
             if (historicalDataSubscribers != null)
             {
                 Receiver.HistoricalDataSubscribe(token, historicalDataSubscribers);
+            }
+            if (historicalDataEndSubscribers != null)
+            {
+                Receiver.HistoricalDataEndSubscribe(token, historicalDataEndSubscribers);
             }
             string endDateTimeString = keepUpToDate?"":endDateTime.ToString("yyyyMMdd HH:mm:ss");
             ClientSocket.reqHistoricalData(token.ID, contract, endDateTimeString, duration.ToDurationStringForHistoricalDataRequest(candleSize), candleSize.IbHistoricalDataBarSizeString(), whatToShow, useRegularTradingHours ? 1 : 0, 1, chartOptions);

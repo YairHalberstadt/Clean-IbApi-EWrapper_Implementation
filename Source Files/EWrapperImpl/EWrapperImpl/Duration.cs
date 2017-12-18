@@ -9,37 +9,41 @@ namespace EWrapperImpl
     public enum Duration
     {
         Null=0,
-        TenYear,
-        FiveYear,
-        TwoYear,
-        OneYear,
-        SixMonths,
-        ThreeMonths,
-        TwoMonths,
-        OneMonth,
-        FourWeeks,
-        ThreeWeeks,
-        TwoWeeks,
-        TenDays,
-        OneWeek,
-        FiveDays,
-        TwoDays,
-        OneDay,
-        TwelveHours,
-        SixHours,
-        ThreeHours,
-        TwoHours,
-        OneHour,
-        ThirtyMinutes,
-        FifteenMinutes,
-        TenMinutes,
-        FiveMinutes,
-        TwoMinutes,
-        OneMinute
+        TenYear=5256000,
+        FiveYear=2628000,
+        TwoYear=1051200,
+        OneYear=525600,
+        SixMonths= 262800,
+        ThreeMonths= 131400,
+        TwoMonths= 87600,
+        OneMonth = 43800,
+        FourWeeks= 40320,
+        ThreeWeeks= 30240,
+        TwoWeeks= 20160,
+        TenDays=14400,
+        OneWeek= 10080,
+        FiveDays=7700,
+        TwoDays=2880,
+        OneDay=1440,
+        TwelveHours=720,
+        SixHours=360,
+        ThreeHours=180,
+        TwoHours=120,
+        OneHour=60,
+        ThirtyMinutes=30,
+        FifteenMinutes=15,
+        TenMinutes=10,
+        FiveMinutes=5,
+        TwoMinutes=2,
+        OneMinute=1
     }
 
     public static class DurationExtensionMethods
     {
+        public static TimeSpan ToTimeSpan(this Duration duration)
+        {
+            return TimeSpan.FromMinutes((int)duration);
+        }
         public static string ToDurationStringForHistoricalDataRequest(this Duration duration, CandleSize candleSize)
         {
             if (candleSize == CandleSize.Month)

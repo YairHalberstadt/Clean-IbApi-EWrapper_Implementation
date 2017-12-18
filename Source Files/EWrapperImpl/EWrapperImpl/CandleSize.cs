@@ -22,7 +22,7 @@ namespace EWrapperImpl
 
     public static class CandleSizeExtensionMethods
     {
-        public static string IbHistoricalDataBarSizeString(this CandleSize candleSize)
+        internal static string IbHistoricalDataBarSizeString(this CandleSize candleSize)
         {
             switch (candleSize)
             {
@@ -46,6 +46,34 @@ namespace EWrapperImpl
                     return "1 week";
                 case CandleSize.Month:
                     return "1 month";
+                default:
+                    throw (new NotImplementedException("Please Check TWS API Reference Guide for the relevant string"));
+            }
+        }
+        public static Duration MaximumHistoricalDataRequestDuration(this CandleSize candleSize)
+        {
+            switch (candleSize)
+            {
+                case CandleSize.FiveSeconds:
+                    return Duration.OneHour;
+                case CandleSize.FifteenSeconds:
+                    return Duration.SixHours;
+                case CandleSize.Minute:
+                    return Duration.OneDay;
+                case CandleSize.FiveMinutes:
+                    return Duration.FourWeeks;
+                case CandleSize.FifteenMinutes:
+                    return Duration.FourWeeks;
+                case CandleSize.Hour:
+                    return Duration.OneMonth;
+                case CandleSize.FourHours:
+                    return Duration.OneMonth;
+                case CandleSize.Day:
+                    return Duration.TenYear;
+                case CandleSize.Week:
+                    return Duration.TenYear;
+                case CandleSize.Month:
+                    return Duration.TenYear;
                 default:
                     throw (new NotImplementedException("Please Check TWS API Reference Guide for the relevant string"));
             }
